@@ -15,5 +15,8 @@ html * {
 }
 .titleline {
   font-size: 150%;
-
+}
+.subtitle {
+  font-size: 110%;
+  font-style: italic;
 }
