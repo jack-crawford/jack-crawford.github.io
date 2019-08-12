@@ -34,6 +34,34 @@ body, html {
   opacity: 0.50;
   filter: alpha(opacity=50); /* For IE8 and earlier */
 }
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
 
 
 /* Create a Parallax Effect */
@@ -279,6 +307,9 @@ body, html {
   <div class="w3-row-padding w3-center">
     <div class="gallery">
       <img src="Baking/A741F953-0D13-4FF9-884C-66B68A95E7BD.JPG">
+      <div class="overlay">
+        <div class="text">Challah</div>
+      </div>
     </div>
   </div>
 </div>
