@@ -20,20 +20,17 @@ body, html {
     color: #777;
     line-height: 1.8;
 }
-.gallery {
-  margin: 5px;
-  border: 1px solid #ccc;
-  float: left;
-  width: 450px;
+.container {
+  position: relative;
+  width: 50%;
 }
-.gallery img{
+
+.image {
+  display: block;
   width: 100%;
   height: auto;
 }
-.gallery:hover .overlay {
-  opacity: 0.50;
-  filter: alpha(opacity=50); /* For IE8 and earlier */
-}
+
 .overlay {
   position: absolute;
   top: 0;
@@ -47,7 +44,9 @@ body, html {
   background-color: #008CBA;
 }
 
-
+.container:hover .overlay {
+  opacity: 1;
+}
 
 .text {
   color: white;
@@ -60,7 +59,6 @@ body, html {
   transform: translate(-50%, -50%);
   text-align: center;
 }
-
 
 /* Create a Parallax Effect */
 .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5 {
@@ -303,8 +301,8 @@ body, html {
 <div class="w3-content w3-container w3-padding-64" id="baking2">
 
   <div class="w3-row-padding w3-center">
-    <div class="gallery">
-      <img src="Baking/A741F953-0D13-4FF9-884C-66B68A95E7BD.JPG">
+    <div class="container">
+      <img src="Baking/A741F953-0D13-4FF9-884C-66B68A95E7BD.JPG" alt="Challah" class="image">
       <div class="overlay">
         <div class="text">Challah</div>
       </div>
