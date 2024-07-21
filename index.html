@@ -1,502 +1,618 @@
 <html>
-<title> Jack Crawford </title>
-<head>
-  <link rel="icon" type="image/png" href="jtc64.png" sizes="64x64" />
-  <link rel="icon" type="image/png" href="jtc32.png" sizes="32x32" />
-  <link rel="icon" type="image/png" href="jtc16.png" sizes="16x16" />
-</head>
+<title> Jack T. Crawford </title>
 
+<head>
+    <link rel="icon" type="image/png" href="jtc64.png" sizes="64x64" />
+    <link rel="icon" type="image/png" href="jtc32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="jtc16.png" sizes="16x16" />
+</head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<script src="https://kit.fontawesome.com/129e394a5a.js" crossorigin="anonymous"></script>
-
+<header>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</header>
+<img src="JTC.png" width="100" height="100" style="position: fixed; right: 10px; top: 10px; z-index: 100;">
 <style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
-body, html {
-    height: 100%;
-    color: #777;
-    line-height: 1.8;
-}
-.content {
-  position: relative;
-  width: 380px;
-  height: auto;
-}
-.grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  padding: 4%;
-  width: 96%;
-}
-.content .content-overlay {
-  background: rgba(0,0,0,0.7);
-  position: absolute;
-  height: auto;
-  width: 100%;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  opacity: 0;
-  -webkit-transition: all 0.4s ease-in-out 0s;
-  -moz-transition: all 0.4s ease-in-out 0s;
-  transition: all 0.4s ease-in-out 0s;
-}
-
-.content:hover .content-overlay{
-  opacity: 1;
-}
-
-.content img{
-  width: 380px;
-}
-
-.content-details {
-  position: absolute;
-  text-align: center;
-  padding-left: 1em;
-  padding-right: 1em;
-  width: 100%;
-  top: 50%;
-  left: 50%;
-  opacity: 0;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  -webkit-transition: all 0.3s ease-in-out 0s;
-  -moz-transition: all 0.3s ease-in-out 0s;
-  transition: all 0.3s ease-in-out 0s;
-}
-
-.content:hover .content-details{
-  top: 50%;
-  left: 50%;
-  opacity: 1;
-}
-
-.content-details h3{
-  color: #fff;
-  font-weight: 500;
-  letter-spacing: 0.15em;
-  margin-bottom: 0.5em;
-  text-transform: uppercase;
-}
-
-.content-details p{
-  color: #fff;
-  font-size: 0.8em;
-}
-
-.fadeIn-bottom{
-  top: 80%;
-}
-
-/* Create a Parallax Effect */
-.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5, .bgimg-6 {
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-/* First image (Logo. Full height) */
-.bgimg-1 {
-    background-image: url('background-1.jpg');
-    min-height: 100%;
-}
-/* Second image (Portfolio) */
-.bgimg-2 {
-    background-image: url("background-2.jpg");
-    min-height: 400px;
-}
-
-/* Third image (Contact) */
-.bgimg-3 {
-    background-image: url("background-3.jpg");
-    min-height: 400px;
-}
-.bgimg-4 {
-    background-image: url("background-4.jpg");
-    min-height: 400px;
-}
-.bgimg-6 {
-    background-image: url("praha.png");
-    min-height: 400px;
-}
-.bgimg-5 {
-    background-image: url("background-5.jpg");
-    min-height: 400px;
-}
-.w3-wide {letter-spacing: 10px;}
-.w3-hover-opacity {cursor: pointer;}
-
-/* Turn off parallax scrolling for tablets and phones */
-@media only screen and (max-device-width: 1024px) {
-    .bgimg-1, .bgimg-2, .bgimg-3 {
-        background-attachment: scroll;
+    html {
+        overflow-x: hidden;
     }
-}
-#soapboxtoptab:hover{
-  background-color: #FCC0B9 !important;
-  color: white !important;
-}
-#soapboxtoptab {
-  font-family: Lobster !important;
-  font-size: 16px !important;
-}
-#baking2 {
-  margin-left: 2% !important;
-  margin-right: 2% !important;
-}
+    body,
+    h1,
+    h2,
+    h4,
+    h5,
+    h6 {
+        font-family: "Lato", sans-serif;
+        scroll-behavior: smooth;
+    }
+
+    p {
+        font-family: "Baskerville", serif;
+        font-size: 1.15rem;
+    }
+
+    #home {
+        background-image: url('background-1.jpg');
+    }
+
+    #tech {
+        background-image: url('beach.jpg');
+    }
+
+    #writing {
+        background-image: url('pantheon.jpg');
+    }
+
+    #aboutMe {
+        min-height: 100%;
+    }
+
+    .bgimg2 {
+        /* height: 90%; */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .bgimg {
+        min-height: 100%;
+        width: 100%;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    /* a {
+    color:var(--white);
+    text-decoration: none;
+} */
+    :root {
+        --blue: #03254E;
+        --green: #048A81;
+        --black: #011C27;
+        --white: #F7FFF7;
+        --brown: #7C3626;
+    }
+
+    .icon {
+        color: var(--white);
+        font-size: 250%;
+        text-align: center;
+    }
+
+    .background {
+        background-color: var(--white);
+    }
+
+    .card {
+        border-radius: 25px;
+        background-color: #03254E80;
+        min-width: 100px;
+        min-height: 100px;
+        color: var(--white);
+        font-size: 110%;
+    }
+
+    .card:hover {
+        border-width: 1px;
+        background-color: #03254E;
+        border-color: var(--white);
+    }
+
+    .container {
+        /* width: 100%;
+    height: 100%; */
+    }
+
+    a {
+        color: var(--green);
+        text-decoration: none;
+    }
+
+    .caro_img {
+        max-height: 50%;
+    }
+
+    hr {
+        width: 50% !important;
+        margin-left: 0 auto !important;
+        margin-right: 0 auto !important;
+
+    }
+
+    .card-container {
+        display: flex;
+        overflow-x: auto;
+        gap: 20px;
+        padding: 20px;
+        /* scroll-snap-type: x mandatory; */
+        scrollbar-width: thin;
+    }
+
+    #cardContainerTech {
+        background-color: #7C3626BB;
+    }
+
+    #cardContainerWriting {
+        background-color: #03254EBB;
+    }
+
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .card-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .card-container {
+        -ms-overflow-style: none;
+        /* IE and Edge */
+        scrollbar-width: none;
+        /* Firefox */
+    }
+
+    .projectCard {
+        flex: 0 0 auto;
+        width: 30em;
+        height: 40em;
+        border: solid;
+        border-color: var(--blue);
+        border-width: 1px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        scroll-snap-align: start;
+        overflow-y: scroll;
+    }
+
+    .projectCard h3 {
+        text-align: center;
+    }
+
+    .card-image {
+        width: 100%;
+        height: 50%;
+        overflow: hidden;
+    }
+
+    .card-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+    }
+
+    .projectCard p {
+        overflow-y: scroll;
+    }
+
+    h3 {
+        font-family: "Baskerville", serif;
+    }
 </style>
+
 <body>
+    <div class="bgimg d-flex align-items-end my-auto" id="home">
+        <div class="row p-3" style="white-space:nowrap; width:100%;">
+            <div class="col-9 d-flex align-items-center">
+                <h1 style="color: white;">JACK T. CRAWFORD</span>
+            </div>
+            <div class="ml-auto col">
+                <div class="row">
+                    <div class="p-3 m-3 col card text-align-center" onclick="window.location.href='#tech'">
+                        <div class="row d-flex justify-content-center">
+                            <a href="#tech" title="Tech" class="icon"><i class="fa fa-desktop"></i></a>
+                            TECH
+                        </div>
+                    </div>
+                    <div class="p-3 m-3 col card text-align-center" onclick="window.location.href='#writing'">
+                        <div class="row d-flex justify-content-center">
+                            <a title="WRITING" class="icon"><i class="fa fa-book"></i></a>
+                            WRITING
+                        </div>
+                    </div>
+                </div>
 
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar" id="myNavbar">
-    <a class="w3-bar-item w3-button w3-hover-blue w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-      <i class="fa fa-bars"></i>
-    </a>
-    <a href="#home" class="w3-bar-item w3-button">HOME</a>
-    <a href="#about" class="w3-bar-item w3-button w3-hide-small w3-hover-blue"><i class="fa fa-user"></i> ABOUT</a>
-    <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small w3-hover-blue"><i class="fa fa-th"></i> PROJECTS </a>
-    <!-- <a href="#soapbox" class="w3-bar-item w3-button w3-hide-small" id="soapboxtoptab" style="hover: #FCC0B9"><i class="fa fa-podcast"></i> Soapbox</a> -->
-    <!-- <a href="#baking" class="w3-bar-item w3-button w3-hide-small w3-hover-blue"><i class="fas fa-cookie-bite"></i>BAKING</a> -->
-    <a href="#writing" class="w3-bar-item w3-button w3-hide-small w3-hover-blue"><i class="fas fa-pen-nib"></i> WRITING </a>
+            </div>
 
-    <a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-hover-blue"><i class="fa fa-envelope"></i> CONTACT</a>
-
-    <a href="https://gfycat.com/gifs/detail/UnderstatedDependableBackswimmer" target="_blank" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-blue">
-      <i class="fa fa-paw"></i>
-    </a>
-  </div>
-
-  <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-    <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
-    <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()"> PROJECTS </a>
-    <!-- <a href="#soapbox" class="w3-bar-item w3-button" id="soapboxtoptab" style="hover: #FCC0B9"> Soapbox</a> -->
-    <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
-  </div>
-</div>
-
-<!-- First Parallax Image with Logo Text -->
-<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
-  <div class="w3-display-middle" style="white-space:nowrap;" style="color: white; font-size: 150%;">
-    <span class="w3-center w3-padding-large w3-wide" style="color: white; font-size: 500%;">JACK <span class="w3-hide-small">CRAWFORD</span></span>
-
-    <div class="w3-center w3-section" style="color: white; font-size: 350%;">
-      <a href="jackCrawfordResume.pdf" title="my resume" target="_blank"><i class="fa fa-gift w3-hover-opacity"></i></a>
-      <a href="https://www.github.com/jack-crawford" target="_blank" title="my code"><i class="fa fa-github w3-hover-opacity"></i></a>
-      <a href="https://www.linkedin.com/in/jacktcrawford" target="_blank" title="my linkedin"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
-      <a href="https://www.librarything.com/catalog.php?view=jackcrawford&shelf=shelf&sort=title&sort=title" target="_blank" title="my library"><i class="fa fa-book w3-hover-opacity"></i></a>
-      <a href="https://open.spotify.com/show/5ZpXGZWsBvGSsEEQCnws2f?si=c79de01c92a241c3" title="my podcast" target="_blank"><i class="fa fa-microphone w3-hover-opacity"></i></a>
-      <a href="https://jacktcrawford.substack.com" target="_blank" title="my newsletter"><i class="fa fa-pen-nib w3-hover-opacity"></i></a>
-
-    </div>
-  </div>
-</div>
-<div class="w3-content w3-container w3-padding-64" id="about">
-  <h3 class="w3-center">ABOUT ME</h3>
-  <p>I'm a proud alumnus of Villanova University, class of '21 with a B.S. in C.S. In my time there,
-     I had the privilege of serving as the station manager at WXVU 89.1 FM 
-    and as co-president of the Villanova chapter of the ACM. Currently, I work at <a href="https://threshold.world target="_blank">threshold.world</a>,
-    where I'm part of the wonderful team building <a href="https://b.world" target="_blank">b.world</a>, a platform that enables impact-oriented teams to
-    improve their impact and storytelling. I also co-host the podcast 
-    <a href="https://open.spotify.com/show/5ZpXGZWsBvGSsEEQCnws2f?si=c79de01c92a241c3" target="_blank">Survivor Analytics</a>,
-     where we discuss the strategies and statistics behind the game show Survivor. On top of all that, I'm currently pursuing a Master's in 
-     Creative Writing and Literature from Harvard University.
-  </p>
-  <div class="w3-row">
-    <div class="w3-col m6 w3-center w3-padding-large">
-      <img title="this is me! hi there! thanks for hovering!"src="self.JPG" class="w3-round w3-image" alt="Photo of Me" width="500" height="333">
-    </div>
-
-    <div class="w3-col m6 w3-hide-small w3-padding-large">
-      <p>
-        I've been writing code professionally since high school, ranging from mobile development to backend API creation,
-        from the iBeacon protocol to data science in R. From entire social networks built from scratch to image-focused GANs in Jupyter, I've built all sorts of stuff.
-        I've also taken several courses in Data Science from Johns Hopkins via Coursera. My senior capstone at Villanova was Ipseity, 
-        a tool demonstrating a proof-of-concept for real-time customized spatial audio in teleconferencing. At threshold.world, I'm 
-        working as a full-stack product engineer, leading product design and implementation for b.world.
-      </p>
-    <u><b> Reading Now: </b></u>
-        <ul style="list-style-type:square">
-          <li>Swann's Way - Marcel Proust</li>
-          <li>The Matter With Things - Iain McGilchrist</li>
-        </ul>
-    </div>
-  </div>
-  <!-- <p class="w3-large w3-center w3-padding-16">I'm always trying to improve at:</p>
-  <p class=""><i class="fa fa-palette"></i> Product Management </p>
-  <div class="w3-light-grey">
-    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:80%">80%</div>
-  </div>
-  <p class=""> Web Development </p>
-  <div class="w3-light-grey">
-    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:75%">75%</div>
-  </div>
-  <p class=""> Baking </p>
-  <div class="w3-light-grey">
-    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:70%">Rising all the time.</div>
-  </div>
-  <p class=""> Leadership and Project Management </p>
-  <div class="w3-light-grey">
-    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:40%"> Always learning. Never finished.</div>
-  </div> -->
-</div>
-
-<div class="w3-row w3-center w3-dark-grey w3-padding-16">
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">10+</span><br>
-    Mobile Apps Published
-  </div>
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">30+</span><br>
-    Projects Done
-  </div>
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">367+</span><br>
-    Books and counting.
-  </div>
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">Lots of</span><br>
-    Lines of code
-  </div>
-</div>
-
-<!-- Second Parallax Image with Portfolio Text -->
-<div class="bgimg-2 w3-display-container w3-opacity-min">
-  <div class="w3-display-middle">
-    <span class="w3-xxlarge w3-text-white w3-wide">SIDE PROJECTS</span>
-  </div>
-</div>
-
-<!-- Container (Portfolio Section) -->
-<div class="w3-content w3-container w3-padding-64" id="portfolio">
-  <p class="w3-center"><em>Some of my past solo work.</em></p><br>
-
-  <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
-  <div class="w3-row-padding w3-center">
-    <div class="w3-col m4">
-      <img title="cork - an app for finding stuff around campus, secured by your university email address" src="cork.jpg" style="width:100%;" onclick="window.open('https://itunes.apple.com/us/app/cork-campus-life-made-mobile/id1236301043?mt=8')" class="w3-hover-opacity" alt="cork - campus life">
-    </div>
-    <!-- <div class="w3-col m3">
-      <img title="this is all the coding work I've done at Villanova" src="champ.png" style="width:100%" onclick="window.open('https://github.com/jack-crawford/code-Nova')" class="w3-hover-opacity" alt="My code from homework and projects">
-    </div> -->
-    <div class="w3-col m4">
-      <img title="tangle - a group social platform i built" src="tangle.jpg" style="width:100%" onclick="window.open('https://itunes.apple.com/us/app/tangle-social-made-simple/id1261494275?mt=8')" class="w3-hover-opacity" alt="tangle - social made simple">
-    </div>
-    <div class="w3-col m4">
-      <img title="curbside cafe is a non-profit serving breakfast to the homeless in Tulsa, OK, I got to ride along and make a video about their work" src="curbside.png" style="width:100%" onclick="window.open('https://youtu.be/qMHREPxlZ7A')" class="w3-hover-opacity" alt="curbside cafe video">
-    </div>
-
-
-<!--
-    <div class="w3-col m3">
-      <img src="venice.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Quiet ocean">
-    </div>
-  -->
-  </div>
-
-  <div class="w3-row-padding w3-center w3-section">
-    <!-- <div class="w3-col m3">
-      <img title="I was fortunate enough to spend a few days in Venice, here's what I did while there" src="venice.png" style="width:100%" onclick="window.open('https://www.youtube.com/watch?v=5_2KjOtLiHM')" class="w3-hover-opacity" alt="venice">
-    </div> -->
-    <div class="w3-col m4">
-      <img title="the holland hall schedule app, my first published iOS work" src="hh.png" style="width:100%" onclick="window.open('https://itunes.apple.com/us/app/holland-hall-upper-school-cycle/id1109043460?mt=8')" class="w3-hover-opacity" alt="HHUS App">
-    </div>
-    <div class="w3-col m4">
-      <img title="juice - a chat client thingy"src="juice.png" style="width:100%" onclick="window.open('http://juice.jacktcrawford.com')" class="w3-hover-opacity" alt="juice">
-    </div>
-    <div class="w3-col m4">
-      <img title="Jacktastic Park, my VR site" src="jackVR.png" style="width:100%" onclick="window.open('http://vr.jacktcrawford.com')" class="w3-hover-opacity" alt="jacktastic park">
-    </div>
-  </div>
-
-</div>
-<!-- <div class="bgimg-4 w3-display-container w3-opacity-min" id="soapbox">
-  <div class="w3-display-middle">
-    <span style="font-family: 'Lobster'; color: #FCC0B9; font-size: 72px;"> Soapbox</span>
-  </div>
-</div>
-<div class="w3-content w3-container w3-padding-64" id="Soapbox">
-
-  <div class="w3-row-padding w3-center">
-    <p style="text-align: left">
-      Soapbox is a show about strong opinions on trivial topics, where I (with occassional guests) talk about gaming, pop culture, baking, really whatever I'm feeling that week.
-      Currently in its second season, you can listen to Soapbox anywhere fine podcasts are sold. Find all those places <b><a style="text-decoration: none; color: #FCC0B9;" href="https://anchor.fm/thesoap" target="_blank">here.</a></b>
-      The show's also on <b><a style="text-decoration: none; color: #FCC0B9;" href="https://twitter.com/SoapboxWithJack" target="_blank">Twitter</a></b> and <b><a style="text-decoration: none; color: #FCC0B9;" href="https://Instagram.com/SoapboxWithJack" target="_blank">Instagram</a></b>, both @SoapboxWithJack.
-      Check out the show's merch on <b><a style="text-decoration: none; color: #FCC0B9;" href="https://teespring.com/stores/soapbox" target="_blank">Teespring</a></b> too!
-    </p>
-    <iframe src="https://open.spotify.com/embed-podcast/show/48AQYQQW5dFBYuVtUwT61h" width="100%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-
-  </div>
-
-
-</div> -->
-<!-- 
-  <div class="bgimg-5 w3-display-container w3-opacity-min" id="baking">
-  <div class="w3-display-middle">
-    <span class="w3-xxlarge w3-text-white w3-wide">MY BAKING</span>
-  </div>
-</div>
-<div class="w3-center" id="baking2">
-
-    <div class="grid-container">
-      <div class="grid-item">
-        <div class="content">
-        <div class="content-overlay"></div>
-          <img src="Baking/A741F953-0D13-4FF9-884C-66B68A95E7BD.JPG" alt="Challah" class="image">
-          <div class="content-details fadeIn-bottom">
-            <h3 class="content-title">Challah</h3>
-            <p class="content-text">A traditionally Jewish enriched bread, made with a touch of honey. Sweet, but savory enough to be the base for a grilled cheese. </p>
-          </div>
         </div>
-      </div>
-      <div class="grid-item">
-        <div class="content">
-          <div class="content-overlay"></div>
-          <img src="Baking/nicebiscuit.JPG" alt="Biscuits" class="image">
-          <div class="content-details fadeIn-bottom">
-            <h3 class="content-title">Biscuit</h3>
-            <p class="content-text">Between buttermilk and solid butter, there's no shortage of butter in the pastry, but these are great with jam and even more butter.</p>
-          </div>
-        </div>
-      </div>
-      <div class="grid-item">
-        <div class="content">
-          <div class="content-overlay"></div>
-          <img src="Baking/nicepanda.JPG" alt="Empanadas" class="image">
-          <div class="content-details fadeIn-bottom">
-            <h3 class="content-title">Empanada</h3>
-            <p class="content-text">Flaky Argentinian pastry, filled with ground beef, peppers, and onions.</p>
-          </div>
-        </div>
-      </div>
-      <div class="grid-item">
-        <div class="content">
-          <div class="content-overlay"></div>
-          <img src="Baking/nicepretzel.JPG" alt="Pretzels" class="image">
-          <div class="content-details fadeIn-bottom">
-            <h3 class="content-title">Pretzel</h3>
-            <p class="content-text">Self explanatory. These babies are just heavenly, whether salted or covered in a gratuitous amount of cinammon sugar.</p>
-          </div>
-        </div>
-      </div>
-      <div class="grid-item"><div class="content">
-        <div class="content-overlay"></div>
-          <img src="Baking/nicebagel.JPG" alt="Bagels" class="image">
-          <div class="content-details fadeIn-bottom">
-            <h3 class="content-title">Bagel</h3>
-            <p class="content-text">A technical challenge. Boiled briefly before baking, these are a challenge I haven't fully conquered yet. </p>
-          </div>
-        </div>
-      </div>
-      <div class="grid-item"><div class="content">
-        <div class="content-overlay"></div>
-          <img src="Baking/niceaeble.JPG" alt="Æbleskiver" class="image">
-          <div class="content-details fadeIn-bottom">
-            <h3 class="content-title">Æbleskiver</h3>
-            <p class="content-text">Spherical Danish treats, cooked in a special pan. Think three dimensional pancakes!</p>
-          </div>
-        </div>
-      </div>
-      <div class="grid-item"><div class="content">
-        <div class="content-overlay"></div>
-          <img src="Baking/niceeclair.JPG" alt="eclairs" class="image">
-          <div class="content-details fadeIn-bottom">
-            <h3 class="content-title">Éclair</h3>
-            <p class="content-text">Choux pastry. Simple, light, perfect.</p>
-          </div>
-        </div>
-      </div>
-      <div class="grid-item"><div class="content">
-        <div class="content-overlay"></div>
-          <img src="Baking/nicescone.JPG" alt="scones" class="image">
-          <div class="content-details fadeIn-bottom">
-            <h3 class="content-title">Scone</h3>
-            <p class="content-text">The English analog to the biscuits above. With homemade butter. </p>
-          </div>
-      </div>
     </div>
-    <div class="grid-item"><div class="content">
-      <div class="content-overlay"></div>
-        <img src="Baking/nicekouign.JPG" alt="scones" class="image">
-        <div class="content-details fadeIn-bottom">
-          <h3 class="content-title">Kouign Amann</h3>
-          <p class="content-text">A Breton pastry, laminated like a croissant, but circular and with sugar.</p>
+    <div class="mx-3" id="aboutMe">
+        <h1 class="p-3">ABOUT</h1>
+        <div class="mx-0 mb-2">
+            <div class="row px-1 pb-3 mx-1">
+                <div class="col-4 mr-3">
+                    <img src="wedding.JPG" class="img-fluid" style="border-radius: 25px;" />
+                </div>
+                <div class="col-7 px-3 text">
+                    <p>
+                        Originally from Tulsa, Oklahoma, Jack attended Holland Hall from 2001 until 2017. (That's no
+                        typo, he went to the same school from Pre-K through the twelfth grade.)
+                        Jack then attended Villanova University, where he received his
+                        B.S. in Computer Science. While at Villanova, Jack was the president of the Association for
+                        Computing Machinery, the station manager at WXVU 89.1 FM, and the host of The Come Up every
+                        Friday night from 8:30-10 PM. At the height of the pandemic, he worked with the Office of
+                        the President to produce Think Negative!, a podcast that kept Villanovans on campus and around the
+                        world abreast of the university's response to the crisis.
+                    </p>
+                    <p>
+                        As a junior at Villanova, Jack began working for <a href="https://threshold.world"
+                            style="color: var(--green)" target="_blank">threshold.world</a> as an intern, becoming a
+                        full developer before his senior year and joining the company full-time after graduation. At
+                        threshold, he leads product development on <a href="https://b.world"
+                            target="_blank">b.world</a>, a platform helping nonprofits and other social impact teams to
+                        manage projects, measure impact, and tell their stories.
+                    </p>
+                    <p>
+                        In 2023, one of Jack's college roommates talked him into starting a podcast where they would
+                        analyze seasons of the reality-competition show Survivor, appropriately titled <a
+                            href="https://linktr.ee/survivoranalytics" target="_blank">Survivor Analytics.</a> Now in
+                        its sixth season, Survivor Analytics has 17,000 followers on TikTok and counting. Multiple
+                        former Survivor contestants have appeared on the show, including Survivor: China winner Todd
+                        Herzog.
+                    </p>
+                    <p> Jack now lives in Washington D.C. with his incredible partner but without any dogs, because you
+                        can only be so lucky.
+                    </p>
+                </div>
+
+            </div>
         </div>
-      </div>
+
     </div>
-  </div>
-</div> 
-<div class="bgimg-4 w3-display-container w3-opacity-min" id="designs">
-  <div class="w3-display-middle">
-    <span class="w3-xxlarge w3-text-white w3-wide">DESIGN WORK</span>
-  </div>
-</div>
-<div class="w3-content w3-container w3-padding-64" id="designs">
-  <script type="text/javascript" src="https://www.redbubble.com/assets/external_portfolio.js"></script>
-  <script id="rb-xzfcxvzx" type="text/javascript">new RBExternalPortfolio('www.redbubble.com', 'wattersson', 4, 4).renderIframe();</script>
-</div> -->
-<div class="bgimg-6 w3-display-container w3-opacity-min" style="background-color: dimgrey;" id="writing">
-  <div class="w3-display-middle">
-    <span class="w3-xxlarge w3-text-white w3-wide">WRITING</span>
-  </div>
-</div>
-<div class="w3-content w3-container w3-padding-64"  id="writing">
-  <!-- <iframe style="width: 100%; height: 80%;" src="https://docs.google.com/document/d/e/2PACX-1vQ2ROtbvlhH5gZNy5pY9KFWFFAkU2pdsRaIvQoarx4bqkp5m3rUYJwUnTdxjpxuvT3qnFauyN6zRT--/pub?embedded=true"></iframe>
-  </br>
-  <iframe style="width: 100%; height: 80%;" src="https://docs.google.com/document/d/e/2PACX-1vRZUg2DS3bgSlz-z0S_TvtfYvcbiAJLnGbOw0Cmj_HEMFUVK4M-sY5CDQKxZXQsbKRjlew1idhyV2v0/pub?embedded=true"></iframe>
--->
-<iframe src="https://jacktcrawford.substack.com/embed" width="100%" height="320" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
-</div>
+    <div class="bgimg2 align-middle" id="tech">
+        <div class="row pt-3 my-auto align-items-center" style="white-space:nowrap; height: 100%">
+            <span style="color: white; font-size: 500%; text-align: center;">TECH</span>
+        </div>
+    </div>
+    <div class="" id="jackAtWork">
+        <div class="mx-0">
+            <div class="row px-3 pb-3 my-3">
 
+                <div class="col my-auto mx-3">
+                    <div class="row d-flex align-items-center">
+                        <h3>
+                            Jack has been developing software professionally for roughly a decade, a fact that gives him
+                            an existential crisis every time he remembers it.
+                        </h3>
+                    </div>
+                    <div class="row">
+                        <p>
+                            Though he got his start in iOS development (back in the Swift 1.0 days), Jack's primary
+                            experience is in full-stack web development. Through high school and college, he built and
+                            published several experiemental platforms on his own while also working part-time as a web
+                            developer. He now works full time at threshold.world, where he leads development on their
+                            SaaS platform b.world. He is well-versed in .NET, PHP, Node, and plenty of other technologies. 
+                        </p>
+                        <p>
+                            <a href="https://www.linkedin.com/in/jacktcrawford/" target="_blank">
+                            Find Jack on LinkedIn here.
+                            </a>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-5 mr-3">
+                    <img src="work.JPG" class="img-fluid" style="border-radius: 25px;" />
+                </div>
+            </div>
+            <div class="row p-3">
+                <h1>Some of Jack's work</h2>
+            </div>
+            <div class="card-container" id="cardContainerTech">
+                <div class="projectCard ml-5 p-3">
+                    <div class="card-image">
+                        <img src="bwo.png" alt="Card image">
+                    </div>
+                    <div class="row mt-3">
+                        <h3>b.world</h3>
+                    </div>
+                    <div class="row">
+                        <p>b.world is a project management platform for impact-oriented teams. One of my favorite
+                            features is Insights, which gives users the power to capture qualitative data at any point
+                            in a project's life-cycle, then use those Insights to drive powerful storytelling.
+                        <p style="text-align: center;"><a href="https://www.b.world/features" target="_blank">Read more
+                                here.</a></p>
+                    </div>
+                </div>
+                <div class="projectCard p-3">
+                    <div class="card-image">
+                        <img src="note.jpeg" alt="Card image">
+                    </div>
+                    <div class="row mt-3">
+                        <h3>Zettelkasten</h3>
+                    </div>
+                    <div class="row">
+                        <p>A Node script and Azure OCR power this system that auto-parses my handwritten papers and
+                            notecards and files them into an Obsidian vault, with smart indexing and relationships.</p>
+                    </div>
+                </div>
+                <div class="projectCard p-3">
+                    <div class="card-image">
+                        <img src="ipseity.png" alt="Card image">
+                    </div>
+                    <div class="row mt-3">
+                        <h3>Ipseity</h3>
+                    </div>
+                    <div class="row">
+                        <p>Ipseity was my senior project at Villanova, a proof of concept for real-time customizable
+                            spatialized audio in teleconferencing. <a
+                                href="https://youtu.be/fXm_gnAvp_w?si=irP89KILhMc1VcR5" target="_blank"> Watch a demo
+                                here.</a></p>
+                    </div>
+                </div>
+                <div class="projectCard p-3">
+                    <div class="card-image">
+                        <img src="dot.jpg" alt="Card image">
+                    </div>
+                    <div class="row mt-3">
+                        <h3>dot</h3>
+                    </div>
+                    <div class="row">
+                        <p>dot was my last published iOS app, a post-Vine, pre-TikTok platform for looping fullscreen
+                            vertical video. It was surprisingly expensive for a college kid making minimum wage to
+                            support storage for that much data, and as such, did not last very long.</p>
+                    </div>
+                </div>
+                <div class="projectCard p-3">
+                    <div class="card-image">
+                        <img src="tangle.jpg" alt="Card image">
+                    </div>
+                    <div class="row mt-3">
+                        <h3>tangle</h3>
+                    </div>
+                    <div class="row">
+                        <p>tangle was a social network I built that allowed users to upload almost any medium of
+                            content, so long as it fit in a little rectangle.</p>
+                    </div>
+                </div>
+                <div class="projectCard p-3">
+                    <div class="card-image">
+                        <img src="gronolo.jpg" alt="Card image">
+                    </div>
+                    <div class="row mt-3">
+                        <h3>gronolo</h3>
+                    </div>
+                    <div class="row">
+                        <p>gronolo was my first experimental social app, a messenger where you could only send one of
+                            three emojis. Over 100k emojis were sent before I took it down.</p>
+                    </div>
+                </div>
+                <div class="projectCard p-3">
+                    <div class="card-image">
+                        <img src="hh.png" alt="Card image">
+                    </div>
+                    <div class="row mt-3">
+                        <h3>Holland Hall Schedule App</h3>
+                    </div>
+                    <div class="row">
+                        <p>My high school used a complex modular system on a six-day cycle, and this app helped students
+                            keep track of where they were in their days. I wrote this app in Swift 1.0, and the backend
+                            was a tiny server that let the school update for snow days and things like that.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bgimg2 align-middle" id="writing">
+        <div class="row pt-3 my-auto align-items-center" style="white-space:nowrap; height: 100%">
+            <span style="color: white; font-size: 500%; text-align: center;">WRITING</span>
+        </div>
+    </div>
+    <div class="p-3" id="jackWrites">
+        <div class="mx-0 mb-2">
+            <div class="row px-3 pb-3 my-3">
+                <div class="col-5 mr-3">
+                    <img src="jackAtHarvard.jpg" class="img-fluid" style="border-radius: 25px;" />
+                </div>
+                <div class="col d-flex align-items-center">
+                    <div class="row my-auto">
+                        <p>
+                            By volume of work, it could be argued that Jack is a baseball writer, but he largely focuses
+                            on the intersection of technology and humanity. Baseball's merely an answer to that great question.
+                            His first published work examined the ethical failings in Boeing's development of the 737
+                            MAX MCAS system, and how their response resembled that of the Therac-25 disaster of the
+                            1980s.
+                        </p>
+                        <p>
+                            Jack began working on his master's in creative writing and literature from Harvard
+                            University in the spring of 2023, and plans to graduate in the spring of 2026. He is
+                            currently revising his first novel, <i>The Whetstone</i>, which will serve as the capstone
+                            of his degree.
+                        </p>
+                        <p>In addition to that and other longer works, he regularly writes an irregular sports column on
+                            his Substack and occasionally publishes short fiction there. </p>
+                    </div>
 
-<!-- Modal for full size images on click-->
-<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
-  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
-  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-    <img id="img01" class="w3-image">
-    <p id="caption" class="w3-opacity w3-large"></p>
-  </div>
-</div>
+                </div>
 
-<!-- Third Parallax Image with Portfolio Text -->
-<div class="bgimg-3 w3-display-container w3-opacity-min">
-  <div class="w3-display-middle">
-     <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
-  </div>
-</div>
+            </div>
+        </div>
 
-<!-- Container (Contact Section) -->
-<div class="w3-content w3-container w3-padding-64" id="contact">
-  <h3 class="w3-center">Contact me!</h3>
-  <p class="w3-center">
-        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Tulsa, OK ||| Washington, D.C. <br>
-        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> <a> jackcrawford2008 at gmail.com </a><br>
-  </p>
-</div>
+    </div>
+    <div class="card-container" id="cardContainerWriting">
+        <div class="projectCard ml-5 p-3">
+            <div class="card-image">
+                <img src="hurston.webp" alt="Card image">
+            </div>
+            <div class="row mt-3">
+                <h3><a href="https://jacktcrawford.substack.com/p/it-stirred-her-tremendously" target="_blank">"It
+                        Stirred Her Tremendously"</a></h3>
+            </div>
+            <div class="row">
+                <small class="py-3">Reading Zora Neale Hurston's <i>Their Eyes Were Watching God</i> as a work of black
+                    feminist transcendentalism and intersectional liberation.</small>
 
-<!-- Footer -->
-<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
-  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-  <div class="w3-xlarge w3-section">
-    <a href="jackCrawfordResume.pdf" title="my resume" target="_blank"><i class="fa fa-gift w3-hover-opacity"></i></a>
-      <a href="https://www.github.com/jack-crawford" target="_blank" title="my code"><i class="fa fa-github w3-hover-opacity"></i></a>
-      <a href="https://www.linkedin.com/in/jacktcrawford" target="_blank" title="my linkedin"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
-      <a href="https://www.librarything.com/catalog.php?view=jackcrawford&shelf=shelf&sort=title&sort=title" target="_blank" title="my library"><i class="fa fa-book w3-hover-opacity"></i></a>
-      <a href="https://open.spotify.com/show/5ZpXGZWsBvGSsEEQCnws2f?si=c79de01c92a241c3" title="my podcast" target="_blank"><i class="fa fa-microphone w3-hover-opacity"></i></a>
-      <a href="https://jacktcrawford.substack.com" target="_blank" title="my newsletter"><i class="fa fa-pen-nib w3-hover-opacity"></i></a>
+                <hr style="margin:auto;" />
+                <p class="py-3">"In the society of <i>Eyes</i>, which is only a few degrees removed from our own, the
+                    power structure is built upon the exploitation of nature and of those most oppressed peoples
+                    (African-Americans and especially African American women), and that system of oppression is enforced
+                    by artificial and manufactured laws. Janie, a paragon of her caste, is deeply attuned to the
+                    inevitable realities of the physical world, and as such liberates herself by realizing that the
+                    man-made society can never overcome the laws of nature (including that final law, death). When she
+                    lives in accordance with nature, why would she be cowed by the flimsy principles of white-and-male
+                    society?"</p>
+                <p style="text-align: center;"><a
+                        href="https://jacktcrawford.substack.com/p/it-stirred-her-tremendously" target="_blank">Read
+                        here.</a></p>
+            </div>
+        </div>
+        <div class="projectCard ml-5 p-3">
+            <div class="card-image">
+                <img src="sumatra.jpg" alt="Card image">
+            </div>
+            <div class="row mt-3">
+                <h3><a href="https://jacktcrawford.substack.com/p/conrads-romanticism" target="_blank">Conrad's
+                        Romanticism</a></h3>
+            </div>
+            <!-- <div class="row">
+                    <p>Joseph Conrad's <i>Lord Jim</i> can be easily read as a mere work of genre fiction, a rollicking oceanic adventure based on a true story. But dig a layer deeper, and it is a heartbreaking exploration of the perils that one can face when living life to the fullest. <a href="https://jacktcrawford.substack.com/p/conrads-romanticism" target="_blank">Read here.</a></p>
+                </div> -->
+            <div class="row">
+                <small class="py-3">Joseph Conrad's <i>Lord Jim</i> can be easily read as a mere work of genre fiction,
+                    a rollicking oceanic adventure based on a true story. But dig a layer deeper, and it is a
+                    heartbreaking exploration of the perils that one can face when living life to the fullest.</small>
 
-  </div>
-  <p>Hosted by GitHub</p>
-</footer>
+                <hr style="margin:auto;" />
+                <p class="py-3">"Any man willing to leave the comforts of Western civilization to pursue the
+                    tribulations of the open ocean is probably a romantic soul in one way or another. The question then
+                    becomes not one of ‘if’, but one of ‘how’. How do they live with their romanticism? How do they
+                    control it, or does it control them?"</p>
+                <p style="text-align: center;"><a href="https://jacktcrawford.substack.com/p/conrads-romanticism"
+                        target="_blank">Read here.</a></p>
+            </div>
+        </div>
+        <div class="projectCard ml-5 p-3">
+            <div class="card-image">
+                <img src="hbpip.webp" alt="Card image">
+            </div>
+            <div class="row mt-3">
+                <h3><a href="https://jacktcrawford.substack.com/p/a-deep-dive-into-hbpip" target="_blank">A Deep Dive
+                        into HBPIP</a></h3>
+            </div>
+            <div class="row">
+                <p>Austin Adams pitched one inning for the Washington Nationals in 2019, and walked away with a World
+                    Series Championship ring. He's a talented pitcher, but his greatest skill seems to be drilling
+                    batters, not striking them out. </p>
+                <p style="text-align: center;"><a href="https://jacktcrawford.substack.com/p/a-deep-dive-into-hbpip"
+                        target="_blank">Read on.</a></p>
+            </div>
+        </div>
+        <div class="projectCard ml-5 p-3">
+            <div class="card-image">
+                <img src="joyce.jpg" alt="Card image">
+            </div>
+            <div class="row mt-3">
+                <h3><a href="https://jacktcrawford.substack.com/p/a-goddess-of-two-sorts" target="_blank">A Goddess of
+                        Two Sorts</a></h3>
+            </div>
+            <div class="row">
+                <small class="py-3">Examining the intentionally muddled parallels between Joyce's <i>Ulysses</i> and
+                    Homer's <i>Odyssey</i> in the first chapter of that great Irish work, specifically the role of the
+                    milkmaid as both Muse and Athena.</small>
 
+                <hr style="margin:auto;" />
+                <p class="py-3">"The parodic nature of Ulysses creates ample opportunity for interpretation on countless
+                    levels. One of the crucial dimensions of Joyce’s work to watch closely is the distance between his
+                    work and the original. Though there are many parallels between the Odyssey and Ulysses, they are not
+                    geometrically parallel, running on identical paths without intersection. The deviations between the
+                    two are always intentional, and their implications are crucial to understanding at least a fraction
+                    of Joyce’s intentions."</p>
+                <p style="text-align: center;"><a href="https://jacktcrawford.substack.com/p/a-goddess-of-two-sorts"
+                        target="_blank">Read here. </a>
+                </p>
+            </div>
+        </div>
+        <div class="projectCard ml-5 p-3">
+            <div class="card-image">
+                <img src="blackmangroves.jpg" alt="Card image">
+            </div>
+            <div class="row mt-3">
+                <h3><a href="https://jacktcrawford.substack.com/p/black-mangroves-part-one" target="_blank">Black
+                        Mangroves</a></h3>
+            </div>
+
+            <div class="row">
+                <small class="py-3">A southern gothic short story full of action and mystery, serialized in four parts
+                    on Substack.</small>
+                <hr style="margin:auto;" />
+                <p class="py-3">"It wasn’t a typical stilt-house, perched upon high beams to remain above the tidal
+                    fluctuations of the swamp. Instead, a stand of mangroves stood closely entangled at the center of
+                    the clearing, trunks twisting and climbing upon one another. These mangrove-stilts were no normal
+                    trees, their bark bleach-white and leaves true black. Among their leaves crouched a cottage of gray
+                    wood, aged and unpainted, with shuttered windows and moss-covered snaggletooth shingling."</p>
+                <p style="text-align: center;"><a href="https://jacktcrawford.substack.com/p/a-goddess-of-two-sorts"
+                        target="_blank">Read here. </a>
+                </p>
+            </div>
+        </div>
+        <div class="projectCard ml-5 p-3">
+            <div class="card-image">
+                <img src="writInWater.jpeg" alt="Card image">
+            </div>
+            <div class="row mt-3">
+                <h3><a href="https://coffeeringreview.wixsite.com/magazine/writ-in-water" target="_blank">Writ in
+                        Water</a></h3>
+            </div>
+            <div class="row">
+                <small class="py-3">Published in The Coffee Ring Review <i>Writ in Water</i> explores the implications
+                    of constant social media consumption and augmented reality on self-image and identity.</small>
+                <hr style="margin:auto;" />
+                <p class="py-3">"Controlling the mask was second nature to Diona. A combination of eye movements, minute
+                    tensions of eyebrows and lips, and murmured verbal commands quickly prepared her for the rave
+                    within. Silver glitter appeared on her cheeks, and with few actions the color shifted to match her
+                    blue top. A similar shade spread like wildfire over her lips. She thought, oh what the hell, and her
+                    eyes began to gleam blue as well. A bit of lightning perpetually circled her irises, the electric
+                    flickering amplified off the glitter like a disco ball. Diona smiled, satisfied with the rush job.
+                    As she worked, notifications she’d been ignoring began to scroll through the chyron under her right
+                    eye. Client requests, messages from friends confused about why she’d left the silent party, plenty
+                    of spam. Her smile disappeared and she dismissed the alerts with a frustrated blink. With one last
+                    check, she took a deep breath and left the restroom."</p>
+                <p style="text-align: center;">
+                    <a href="https://coffeeringreview.wixsite.com/magazine/writ-in-water"  target="_blank">
+                        Read here.
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div class="projectCard p-3">
+            <div class="card-image">
+                <img src="onceAgain.png" alt="Card image">
+            </div>
+            <div class="row mt-3">
+                <h3>Once Again, We Need to Ask...</h3>
+            </div>
+            <div class="row mt-3">
+                <p>
+                    Published in 2020, this paper by Jack and his mentor Dr. Bill Fleischman examined the tragic
+                    similarities in engineering, testing, and response between the Boeing 737 MAX and the Therac-25, a
+                    classic example of ethical failure in computing. 
+                    <a href="https://youtu.be/rYcTViI6moM?si=wmqXOOgLH5OgLvez" target="_blank">Watch the abstract
+                        presentation here
+                    </a>
+                    , or 
+                    <a href="https://www.unirioja.es/ethicomp/2020/assets/files/978-84-09-20272-0%20(PROCCEDINGS).pdf"
+                        target="_blank">read the full paper here (beginning on page 368)
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="p-3" style="background-color: #011C27;">
+        <div class="row" style="text-align: center; color:white;">
+            <a href="#home" class=""><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+            <small style="font-family: Arial, Helvetica, sans-serif;">Contact: jackcrawford2008 at gee mail dot com
+            </small>
+            <small style="font-family: Arial, Helvetica, sans-serif;">Hosted by GitHub</p>
+        </div>
+    </div>
 </body>
+
 </html>
